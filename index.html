@@ -1,185 +1,219 @@
-
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-		<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GRZ41JR58B"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRZ41JR58B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GRZ41JR58B');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Blox Fruit Script</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://i.imgur.com/g4YkyIX.png" type="image/png">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+        color: #fff;
+        overflow-x: hidden;
+        -webkit-text-size-adjust: 100%;
+      }
 
-  gtag('config', 'G-GRZ41JR58B');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blox Fruit Script</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="https://i.imgur.com/g4YkyIX.png" type="image/png">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      overflow-x: hidden;
-    }
+      .container {
+        text-align: center;
+        padding: 40px 15px 30px;
+        max-width: 100%;
+      }
 
-    .container {
-      text-align: center;
-      padding: 60px 20px 40px;
-    }
-
-    h1 {
-      font-size: 2.5em;
-      color: #f1c40f;
-      margin-bottom: 10px;
-      text-shadow: 0 0 10px #f1c40f88;
-    }
-
-    p.subtitle {
-      font-size: 1.1em;
-      margin-bottom: 25px;
-      color: #ddd;
-    }
-
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin-bottom: 30px;
-    }
-
-    .feature {
-      border: 1px solid #f1c40f;
-      border-radius: 25px;
-      padding: 10px 20px;
-      color: #f1c40f;
-      font-weight: bold;
-      background: rgba(0,0,0,0.3);
-      box-shadow: 0 0 10px #f1c40f44;
-      text-shadow: 0 0 5px #f1c40f;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: float 3s ease-in-out infinite;
-    }
-
-    .feature:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px #f1c40f;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
-      100% { transform: translateY(0); }
-    }
-
-    .platforms {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 25px;
-    }
-
-    .platform-btn {
-      padding: 10px 22px;
-      border-radius: 25px;
-      font-weight: bold;
-      background: #111;
-      color: #ccc;
-      border: none;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 10px #000;
-    }
-
-    .platform-btn:hover {
-      box-shadow: 0 0 12px #00ffe5;
-      transform: translateY(-2px);
-    }
-
-    .platform-btn.active {
-      background: linear-gradient(to right, #00f2ff, #00ffe5);
-      color: #000;
-      box-shadow: 0 0 20px #00ffe5;
-    }
-
-    .download-section {
-      margin-top: 20px;
-      background: rgba(255,255,255,0.05);
-      padding: 25px 20px;
-      border-radius: 20px;
-      display: inline-block;
-      box-shadow: 0 0 30px rgba(0, 255, 229, 0.2);
-    }
-
-    .download-btn {
-      display: inline-block;
-      padding: 15px 30px;
-      font-size: 1.1em;
-      border: none;
-      border-radius: 30px;
-      background: linear-gradient(90deg, #00f2ff, #00ffe5);
-      color: #000;
-      cursor: pointer;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 0 15px #00ffe5, 0 0 30px #00ffe544;
-      transition: all 0.3s ease;
-      animation: pulse 2s infinite;
-    }
-
-    .download-btn:hover {
-      box-shadow: 0 0 30px #00ffe5, 0 0 60px #00ffe5aa;
-      background: #0ff;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
-
-    .info {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      font-size: 0.9em;
-      color: #bbb;
-    }
-
-    .info span::before {
-      content: "●";
-      font-size: 0.6em;
-      color: #00ffe5;
-      margin-right: 5px;
-    }
-
-    @media (max-width: 600px) {
       h1 {
-        font-size: 2em;
+        font-size: clamp(1.8em, 6vw, 2.5em);
+        color: #f1c40f;
+        margin-bottom: 10px;
+        text-shadow: 0 0 10px #f1c40f88;
+        line-height: 1.3;
+      }
+
+      p.subtitle {
+        font-size: clamp(0.9em, 3.5vw, 1.1em);
+        margin-bottom: 25px;
+        color: #ddd;
+        line-height: 1.5;
+        padding: 0 10px;
       }
 
       .features {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 25px;
+        padding: 0 5px;
       }
 
       .feature {
-        width: 80%;
-        margin-bottom: 10px;
-        text-align: center;
+        border: 1px solid #f1c40f;
+        border-radius: 25px;
+        padding: 8px 15px;
+        color: #f1c40f;
+        font-weight: bold;
+        background: rgba(0,0,0,0.3);
+        box-shadow: 0 0 10px #f1c40f44;
+        text-shadow: 0 0 5px #f1c40f;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: float 3s ease-in-out infinite;
+        font-size: clamp(0.8em, 3vw, 1em);
+        flex: 1 0 auto;
+        max-width: 100%;
       }
 
-      .platform-btn, .download-btn {
-        width: 100%;
-        font-size: 1em;
+      .feature:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px #f1c40f;
       }
-    }
-  </style>
+
+      @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+        100% { transform: translateY(0); }
+      }
+
+      .platforms {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 20px;
+        padding: 0 5px;
+      }
+
+      .platform-btn {
+        padding: 10px 15px;
+        border-radius: 25px;
+        font-weight: bold;
+        background: #111;
+        color: #ccc;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 10px #000;
+        font-size: clamp(0.8em, 3.5vw, 1em);
+        flex: 1 0 auto;
+        min-width: 23%;
+      }
+
+      .platform-btn:hover {
+        box-shadow: 0 0 12px #00ffe5;
+        transform: translateY(-2px);
+      }
+
+      .platform-btn.active {
+        background: linear-gradient(to right, #00f2ff, #00ffe5);
+        color: #000;
+        box-shadow: 0 0 20px #00ffe5;
+      }
+
+      .download-section {
+        margin-top: 20px;
+        background: rgba(255,255,255,0.05);
+        padding: 20px 15px;
+        border-radius: 15px;
+        display: inline-block;
+        box-shadow: 0 0 30px rgba(0, 255, 229, 0.2);
+        width: 95%;
+        max-width: 500px;
+      }
+
+      .download-btn {
+        display: inline-block;
+        padding: 12px 20px;
+        font-size: clamp(0.9em, 4vw, 1.1em);
+        border: none;
+        border-radius: 30px;
+        background: linear-gradient(90deg, #00f2ff, #00ffe5);
+        color: #000;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 0 15px #00ffe5, 0 0 30px #00ffe544;
+        transition: all 0.3s ease;
+        animation: pulse 2s infinite;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .download-btn:hover {
+        box-shadow: 0 0 30px #00ffe5, 0 0 60px #00ffe5aa;
+        background: #0ff;
+      }
+
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+      }
+
+      .info {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: clamp(0.7em, 3vw, 0.9em);
+        color: #bbb;
+        margin-top: 15px;
+        line-height: 1.4;
+      }
+
+      .info span {
+        display: flex;
+        align-items: center;
+      }
+
+      .info span::before {
+        content: "●";
+        font-size: 0.6em;
+        color: #00ffe5;
+        margin-right: 5px;
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 30px 10px 20px;
+        }
+        
+        .feature {
+          padding: 6px 12px;
+          border-radius: 20px;
+          flex: 1 0 45%;
+          margin-bottom: 5px;
+        }
+        
+        .platform-btn {
+          min-width: 45%;
+          padding: 8px 10px;
+        }
+        
+        .download-btn {
+          padding: 10px 15px;
+        }
+        
+        .info {
+          flex-direction: column;
+          align-items: center;
+          gap: 5px;
+        }
+      }
+    </style>
 </head>
 <body>
 
@@ -204,13 +238,13 @@
     </div>
 
     <div class="download-section">
-  <a href="your-download-link-windows.zip" class="download-btn" id="download-btn">📥 Download Blox Script for Windows</a><br></br>
-  <div class="info">
-    <span>💾 Size: 14.2 MB</span>
-    <span>🕒 Updated: May 2025</span>
-    <span>✅ Verified By Norton™</span>
-  </div>
-</div>
+      <a href="your-download-link-windows.zip" class="download-btn" id="download-btn">📥 Download Blox Script for Windows</a><br><br>
+      <div class="info">
+        <span>💾 Size: 14.2 MB</span>
+        <span>🕒 Updated: May 2025</span>
+        <span>✅ Verified By Norton™</span>
+      </div>
+    </div>
   </div>
   
 
@@ -226,11 +260,29 @@
         const platform = button.getAttribute("data-platform");
         const link = button.getAttribute("data-link");
         downloadBtn.href = link;
-        downloadBtn.textContent = `⬇ Download Blox Script for ${platform}`;
+        downloadBtn.textContent = `📥 Download Blox Script for ${platform}`;
       });
+    });
+    
+    // Ensure buttons are properly sized on load
+    window.addEventListener('load', function() {
+      const adjustButtonWidths = () => {
+        const buttons = document.querySelectorAll('.platform-btn');
+        if (window.innerWidth < 480) {
+          buttons.forEach(btn => {
+            btn.style.minWidth = '45%';
+          });
+        } else {
+          buttons.forEach(btn => {
+            btn.style.minWidth = '23%';
+          });
+        }
+      };
+      
+      adjustButtonWidths();
+      window.addEventListener('resize', adjustButtonWidths);
     });
   </script>
 
 </body>
 </html>
-
